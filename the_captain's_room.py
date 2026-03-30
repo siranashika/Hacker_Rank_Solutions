@@ -1,0 +1,7 @@
+k = int(input())
+rooms = list(map(int, input().split()))
+room_set = set(rooms)
+sum_unique = sum(room_set)
+sum_total = sum(rooms)
+captain_room = (sum_unique * k - sum_total) // (k - 1)
+print(captain_room)
