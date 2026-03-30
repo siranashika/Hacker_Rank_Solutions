@@ -1,0 +1,10 @@
+import re
+def check_card(card):
+    if not re.match(r"^[456](?:\d{15}|\d{3}(?:-\d{4}){3})$", card):
+        return "Invalid"    
+    clean_card = card.replace("-", "")    
+    if re.search(r"(\d)\1{3,}", clean_card):
+        return "Invalid"        
+    return "Valid"
+for _ in range(int(input())):
+    print(check_card(input()))
