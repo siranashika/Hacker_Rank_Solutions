@@ -1,0 +1,5 @@
+n = int(input())
+es= set(map(int, input().split()))
+m = int(input())
+fs = set(map(int, input().split()))
+print(len(es.union(fs)))
